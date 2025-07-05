@@ -1,0 +1,32 @@
+# ========== Unity 基础 ==========
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+
+# ========== 用户 / IDE ==========
+.vs/
+.idea/
+*.sln
+*.csproj
+*.user
+*.pidb
+*.suo
+
+# ========== 操作系统 ==========
+.DS_Store
+Thumbs.db
+
+# ========== Unity Collaborate ==========
+.collabignore
+.collab/
+
+# ========== Unity 自动导入 ==========
+MemoryCaptures/
+ExportedObj/
+sysinfo.txt
+
+# ========== Unity 云 ==========
+.cloud/
