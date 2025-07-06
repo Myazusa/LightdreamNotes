@@ -66,7 +66,7 @@ namespace UI
         {
             var stack = _uiLayers[layerName];
 
-            if (stack.Count <= 1) return;
+            if (stack.Count == 0) return;
 
             stack.Clear();
         }
