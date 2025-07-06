@@ -15,12 +15,12 @@ namespace I8n
         public string currentLanguage = "en";
 
         private void Awake() {
-            if (Instance == null) Instance = this;
+            if (!Instance) Instance = this;
             _fontDict = fontMap.ToDictionary(f => f.languageCode, f => f.font);
         }
 
         public TMP_FontAsset GetFontForCurrentLanguage() {
-            return _fontDict.TryGetValue(currentLanguage, out var font) ? font : null;
+            return _fontDict.GetValueOrDefault(currentLanguage);
         }
 
         public void ApplyFontToAllTMP() {
