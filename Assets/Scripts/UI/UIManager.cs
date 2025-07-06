@@ -85,15 +85,17 @@ namespace UI
                 {
                     name = $"Layer_{layerName}",
                     // 容器本身不拦截事件
-                    pickingMode = PickingMode.Ignore
+                    pickingMode = PickingMode.Ignore,
+                    style =
+                    {
+                        position = Position.Absolute,
+                        top = 0,
+                        bottom = 0,
+                        left = 0,
+                        right = 0,
+                        flexGrow = 1
+                    }
                 };
-
-                container.style.position = Position.Absolute;
-                container.style.top = 0;
-                container.style.bottom = 0;
-                container.style.left = 0;
-                container.style.right = 0;
-                container.style.flexGrow = 1;
 
                 // 添加到画面上
                 RootVisualElement.Add(container);
