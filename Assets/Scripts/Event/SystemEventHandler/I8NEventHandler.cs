@@ -1,9 +1,9 @@
 ﻿using Enum;
-using EventBus.SystemEvent;
+using Event.SystemEvent;
 using I8n;
 using UnityEngine;
 
-namespace EventBus.SystemEventHandler
+namespace Event.SystemEventHandler
 {
     public static class I8NEventHandler
     {
@@ -12,6 +12,8 @@ namespace EventBus.SystemEventHandler
         /// </summary>
         /// <param name="e"></param>
         public static void HandleRefreshAllLocalizedText(ref I8NEvent e) {
+            if (e.Command != I8NEvent.CommandType.RefreshAllLocalizedText) return;
+
             foreach (var t in Object.FindObjectsByType<MonoLocalizedText>(FindObjectsSortMode.None)) {
                 t.UpdateText();
             }
@@ -24,6 +26,8 @@ namespace EventBus.SystemEventHandler
         /// <param name="e"></param>
         public static void HandleSwitchLanguage(ref I8NEvent e)
         {
+            if (e.Command != I8NEvent.CommandType.SwitchLanguage) return;
+
             // 读取i8n的json文件，存在对象里
             MonoLocalizationManager.Instance.LoadLanguage(e.LangCode);
 

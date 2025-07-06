@@ -16,6 +16,7 @@ namespace I8n
         }
 
         public void UpdateText() {
+            // todo:修复这里异常
             if (ReferenceEquals(_text,null)) _text = GetComponent<TMP_Text>();
             _text.text = MonoLocalizationManager.Instance.Get(key);
         }

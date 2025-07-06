@@ -1,9 +1,9 @@
 ﻿using System.Collections;
-using EventBus.SystemEvent;
+using Event.SystemEvent;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace EventBus.SystemEventHandler
+namespace Event.SystemEventHandler
 {
     public static class SceneEventHandler
     {
@@ -13,6 +13,8 @@ namespace EventBus.SystemEventHandler
         /// <param name="e"></param>
         public static void HandleToMainGameScene(ref SceneEvent e)
         {
+            if (e.Command != SceneEvent.CommandType.ToMainGameScene) return;
+
             e.Context.StartCoroutine(LoadSceneAsync("MainGameScene"));
             IEnumerator LoadSceneAsync(string sceneName)
             {
@@ -32,8 +34,13 @@ namespace EventBus.SystemEventHandler
         /// <param name="e"></param>
         public static void HandleGameQuit(ref SceneEvent e)
         {
+            if (e.Command != SceneEvent.CommandType.GameQuit) return;
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
             // 游戏直接退出，全平台通用
             Application.Quit();
+#endif
         }
     }
 }

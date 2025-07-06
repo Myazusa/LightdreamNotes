@@ -1,16 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Enum;
 
-namespace EventBus
+namespace Event
 {
     public delegate void EventHandler<T>(ref T e) where T : struct, IEvent;
 
     public class EventBus
     {
+        private EventBus(){}
+
+        public static EventBus Instance { get; } = new EventBus();
+
         private Dictionary<int, SortedDictionary<int, List<Delegate>>> _handlers = new();
 
-        public void Register<T>(int priority, EventHandler<T> handler) where T : struct, IEvent
+        public void Register<T>(EventPriority priority, EventHandler<T> handler) where T : struct, IEvent
         {
             var id = new T().Id;
 
@@ -20,10 +25,10 @@ namespace EventBus
                 _handlers[id] = priorityDict;
             }
 
-            if (!priorityDict.TryGetValue(priority, out var list))
+            if (!priorityDict.TryGetValue((int) priority, out var list))
             {
                 list = new();
-                priorityDict[priority] = list;
+                priorityDict[(int)priority] = list;
             }
 
             list.Add(handler);
@@ -67,7 +72,8 @@ namespace EventBus
             {
                 return !rejectable.IsRejected;
             }
-            return false;
+            // 没有实现Reject就继续执行
+            return true;
         }
     }
 }
