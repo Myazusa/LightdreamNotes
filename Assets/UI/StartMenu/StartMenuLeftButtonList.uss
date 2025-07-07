@@ -6,19 +6,19 @@ VisualElement {
 }
 .left-list-button {
     background-image: url("../UIResources/Button/border_button_pink.png");
-    background-size: cover;         /* 或 contain */
-    background-repeat: no-repeat;
 
-    width: 470px;
+    width: 370px;
     height: 80px;
     margin: 20px;
 
-    -unity-background-scale-mode: scale-to-fit;
     font-size: 20px;
     -unity-font-style: bold;
-    color: rgb(253, 253, 253);
-    border-color: transparent;
+    color: var(--theme-button-font-color);
 }
 Button{
-    background-color: transparent;
+
+}
+
+.left-list-button:hover{
+    -unity-background-image-tint-color: var(--theme-button-hover-tint-color);
 }

@@ -1,0 +1,26 @@
+/* 这个样式表设置全局的东西 */
+
+.unity-button {
+    /* 取消默认按钮的各种废物样式 */
+    padding: 0;
+    border-width: 0;
+    border-color: transparent;
+    background-color: transparent;
+
+    /* 所有的按钮背景图片禁止拉伸 */
+    background-size: cover;
+    background-repeat: no-repeat;
+    -unity-background-scale-mode: scale-to-fit;
+
+    /* 所有的按钮都需要有鼠标悬浮淡入淡出 */
+    transition: -unity-background-image-tint-color 0.5s ease, color 0.5s ease;
+}
+
+:root{
+    width: 100%;
+    height: 100%;
+
+    /* 以下是主题色 */
+    --theme-button-hover-tint-color: #fdb1c3;
+    --theme-button-font-color: #fdfdfd;
+}

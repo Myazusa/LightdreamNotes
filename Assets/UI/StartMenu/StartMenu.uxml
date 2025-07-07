@@ -1,5 +1,6 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:Template name="StartMenuLeftButtonList" src="project://database/Assets/UI/StartMenu/StartMenuLeftButtonList.uxml?fileID=9197481963319205126&amp;guid=e0062c68143b2cd48b0e687a6144bea8&amp;type=3#StartMenuLeftButtonList" />
+    <Style src="project://database/Assets/UI/GlobalStyle.uss?fileID=7433441132597879392&amp;guid=f0ad93f4675a6eb4ca96d53b5f7755c2&amp;type=3#GlobalStyle" />
     <Style src="project://database/Assets/UI/StartMenu/StartMenu.uss?fileID=7433441132597879392&amp;guid=ce5377bcd60c47f49bda07bfe77e8e08&amp;type=3#StartMenu" />
     <ui:VisualElement name="VisualElement" style="flex-grow: 1;">
         <ui:Instance template="StartMenuLeftButtonList" style="width: initial; height: initial; position: absolute; top: 481px; left: 51px;" />
