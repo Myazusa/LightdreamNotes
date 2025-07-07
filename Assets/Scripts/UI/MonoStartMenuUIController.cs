@@ -1,3 +1,4 @@
+using System;
 using Event;
 using Event.SystemEvent;
 using UnityEngine;
@@ -5,20 +6,38 @@ using UnityEngine.UIElements;
 
 namespace UI
 {
-    public class StartMenuUIController : MonoBehaviour
+    public class MonoStartMenuUIController : MonoBehaviour
     {
         private VisualElement _root;
         private Button _startButton;
         private Button _settingsButton;
         private Button _exitButton;
 
+        private const string BASE_UXML_NAME = "StartMenu";
+
+        private UIManager _manager;
+
         private void Awake()
         {
+            // 这个脚本要和UIDocument组件挂在同一个物件上
             var uiDocument = GetComponent<UIDocument>();
             _root = uiDocument.rootVisualElement;
+            // todo: 这里是不对的，栈底和根不是同一个元素
+            _manager = new UIManager(_root);
+            var asset = UIManager.LoadVisualTreeAsset(BASE_UXML_NAME);
+            if (asset)
+            {
+                _manager.InitLayers(asset);
+            }
+            else
+            {
+                Debug.LogError($"Failed to load " + BASE_UXML_NAME);
+            }
         }
         private void OnEnable()
         {
+            // 所有的事件放在这个周期注册是为了可以统一的禁用UI
+
             _startButton = _root.Q<Button>("start-menu-start-button");
             _startButton.clicked += OnStartButtonClicked;
 
@@ -47,6 +66,7 @@ namespace UI
         }
         private void OnDisable()
         {
+            // 不启用就卸载事件
             _startButton = _root.Q<Button>("start-menu-start-button");
             _startButton.clicked -= OnStartButtonClicked;
 
@@ -55,6 +75,11 @@ namespace UI
 
             _exitButton = _root.Q<Button>("start-menu-exit-button");
             _exitButton.clicked -= OnExitButtonClicked;
+        }
+
+        private void OnDestroy()
+        {
+            _manager = null;
         }
     }
 }

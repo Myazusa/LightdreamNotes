@@ -1,0 +1,7 @@
+#left-button-list-template-container{
+    width: initial;
+    height: initial;
+    position: absolute;
+    top: 481px;
+    left: 51px;
+}
