@@ -1,0 +1,24 @@
+VisualElement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.left-list-button {
+    background-image: url("../UIResources/Button/border_button_pink.png");
+    background-size: cover;         /* 或 contain */
+    background-repeat: no-repeat;
+
+    width: 470px;
+    height: 80px;
+    margin: 20px;
+
+    -unity-background-scale-mode: scale-to-fit;
+    font-size: 20px;
+    -unity-font-style: bold;
+    color: rgb(253, 253, 253);
+    border-color: transparent;
+}
+Button{
+    background-color: transparent;
+}

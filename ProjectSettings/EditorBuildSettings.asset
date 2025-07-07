@@ -9,5 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenuScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 470253c6cd948b64485113a10f9b9de8, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: bbb9aca74c606a247802dee0e8114d9c, type: 3}
+    com.unity.localization.addressable-group-rules: {fileID: 11400000, guid: d73c744212b0d6d48b95c904c0ba59eb, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: e24cb562b808d164fbf221ab5a9d4242, type: 2}
   m_UseUCBPForAssetBundles: 0

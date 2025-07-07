@@ -34,7 +34,5 @@ public class LightdreamNotes:MonoBehaviour
         // 注册所有事件
         EventBus.Instance.Register<SceneEvent>(EventPriority.Lowest,SceneEventHandler.HandleToMainGameScene);
         EventBus.Instance.Register<SceneEvent>(EventPriority.Lowest,SceneEventHandler.HandleGameQuit);
-        EventBus.Instance.Register<I8NEvent>(EventPriority.Lowest,I8NEventHandler.HandleRefreshAllLocalizedText);
-        EventBus.Instance.Register<I8NEvent>(EventPriority.Lowest,I8NEventHandler.HandleSwitchLanguage);
     }
 }

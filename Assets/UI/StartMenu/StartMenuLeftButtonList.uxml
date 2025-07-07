@@ -1,0 +1,23 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/StartMenu/StartMenuLeftButtonList.uss?fileID=7433441132597879392&amp;guid=87b1e18f6fa23304fbed32b46a5612a6&amp;type=3" />
+    <ui:VisualElement style="flex-grow: 1; -unity-font-definition: initial;">
+        <ui:Button text="Button" class="left-list-button">
+            <Bindings>
+                <UnityEngine.Localization.LocalizedString property="text" table="GUID:c1e31d99d02ba2f4dae8bac91f806830" entry="Id(143909449728)" />
+                <UnityEngine.Localization.LocalizedFont property="style.unityFontDefinition" table="GUID:61bee8d79151798429542050b98a8701" entry="Id(377989361664)" />
+            </Bindings>
+        </ui:Button>
+        <ui:Button text="Button" class="left-list-button">
+            <Bindings>
+                <UnityEngine.Localization.LocalizedFont property="style.unityFontDefinition" table="GUID:61bee8d79151798429542050b98a8701" entry="Id(45657878528)" />
+                <UnityEngine.Localization.LocalizedString property="text" table="GUID:c1e31d99d02ba2f4dae8bac91f806830" entry="Id(3675022684160)" />
+            </Bindings>
+        </ui:Button>
+        <ui:Button text="Button" class="left-list-button">
+            <Bindings>
+                <UnityEngine.Localization.LocalizedString property="text" table="GUID:c1e31d99d02ba2f4dae8bac91f806830" entry="Id(3675022684161)" />
+                <UnityEngine.Localization.LocalizedFont property="style.unityFontDefinition" table="GUID:61bee8d79151798429542050b98a8701" entry="Id(45657878528)" />
+            </Bindings>
+        </ui:Button>
+    </ui:VisualElement>
+</ui:UXML>
