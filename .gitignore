@@ -8,7 +8,9 @@
 
 # ========== Unity 美术资源 ==========
 [Aa]ssets/Resources/
+[Aa]ssets/Resources.meta
 [Aa]ssets/UI/UIResources/
+[Aa]ssets/UI/UIResources.meta
 
 # ========== 用户 / IDE ==========
 .vs/
