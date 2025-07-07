@@ -6,6 +6,10 @@
 [Bb]uilds/
 [Ll]ogs/
 
+# ========== Unity 美术资源 ==========
+[Aa]ssets/Resources/
+[Aa]ssets/UI/UIResources/
+
 # ========== 用户 / IDE ==========
 .vs/
 .idea/
