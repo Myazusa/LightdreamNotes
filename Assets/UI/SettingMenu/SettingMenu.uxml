@@ -1,0 +1,45 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/GlobalStyle.uss?fileID=7433441132597879392&amp;guid=f0ad93f4675a6eb4ca96d53b5f7755c2&amp;type=3#GlobalStyle" />
+    <Style src="project://database/Assets/UI/SettingMenu/SettingMenu.uss?fileID=7433441132597879392&amp;guid=72f647821318ea04bbbd27b1feafd12f&amp;type=3#SettingMenu" />
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:VisualElement name="setting-title-background-image" class="image" style="top: 76px; left: 628px;">
+            <ui:Label name="setting-title" text="Label" style="font-size: 80px;">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedFont property="style.unityFontDefinition" table="GUID:61bee8d79151798429542050b98a8701" entry="Id(432020385792)" />
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:c1e31d99d02ba2f4dae8bac91f806830" entry="Id(661620785934336)" />
+                </Bindings>
+            </ui:Label>
+        </ui:VisualElement>
+        <ui:Button text="Button" name="setting-key-button" style="background-image: url(&quot;project://database/Assets/UI/UIResources/setting_button_background_nocircle.png?fileID=2800000&amp;guid=91d5c5ca94406f446bff74010f19b8e7&amp;type=3#setting_button_background_nocircle&quot;); height: 177px; width: 182px; position: absolute; top: 436px; left: 49px; font-size: 50px; color: rgb(181, 126, 126);">
+            <Bindings>
+                <UnityEngine.Localization.LocalizedFont property="style.unityFontDefinition" table="GUID:61bee8d79151798429542050b98a8701" entry="Id(432020385792)" />
+                <UnityEngine.Localization.LocalizedString property="text" table="GUID:c1e31d99d02ba2f4dae8bac91f806830" entry="Id(667947981598720)" />
+            </Bindings>
+        </ui:Button>
+        <ui:Button text="Button" name="setting-screen-button" style="background-image: url(&quot;project://database/Assets/UI/UIResources/setting_button_background.png?fileID=2800000&amp;guid=beac957ebb63138428710717a4ca85f4&amp;type=3#setting_button_background&quot;); height: 219px; width: 222px; position: absolute; top: 272px; left: 199px; font-size: 50px; color: rgb(181, 126, 126);">
+            <Bindings>
+                <UnityEngine.Localization.LocalizedFont property="style.unityFontDefinition" table="GUID:61bee8d79151798429542050b98a8701" entry="Id(432020385792)" />
+                <UnityEngine.Localization.LocalizedString property="text" table="GUID:c1e31d99d02ba2f4dae8bac91f806830" entry="Id(667745350578176)" />
+            </Bindings>
+        </ui:Button>
+        <ui:Button text="Button" name="setting-game-button" style="background-image: url(&quot;project://database/Assets/UI/UIResources/setting_button_background.png?fileID=2800000&amp;guid=beac957ebb63138428710717a4ca85f4&amp;type=3#setting_button_background&quot;); height: 281px; width: 296px; position: absolute; top: 528px; left: 203px; font-size: 60px; color: rgb(181, 126, 126);">
+            <Bindings>
+                <UnityEngine.Localization.LocalizedFont property="style.unityFontDefinition" table="GUID:61bee8d79151798429542050b98a8701" entry="Id(432020385792)" />
+                <UnityEngine.Localization.LocalizedString property="text" table="GUID:c1e31d99d02ba2f4dae8bac91f806830" entry="Id(668242719535104)" />
+            </Bindings>
+        </ui:Button>
+        <ui:Button text="Button" name="setting-other-button" style="background-image: url(&quot;project://database/Assets/UI/UIResources/setting_button_background.png?fileID=2800000&amp;guid=beac957ebb63138428710717a4ca85f4&amp;type=3#setting_button_background&quot;); height: 161px; width: 154px; position: absolute; top: 766px; left: 79px; font-size: 40px; color: rgb(181, 126, 126);">
+            <Bindings>
+                <UnityEngine.Localization.LocalizedFont property="style.unityFontDefinition" table="GUID:61bee8d79151798429542050b98a8701" entry="Id(432020385792)" />
+                <UnityEngine.Localization.LocalizedString property="text" table="GUID:c1e31d99d02ba2f4dae8bac91f806830" entry="Id(668412190388224)" />
+            </Bindings>
+        </ui:Button>
+        <ui:Button text="Button" name="setting-sound-button" style="background-image: url(&quot;project://database/Assets/UI/UIResources/setting_button_background_nocircle.png?fileID=2800000&amp;guid=91d5c5ca94406f446bff74010f19b8e7&amp;type=3#setting_button_background_nocircle&quot;); height: 177px; width: 182px; position: absolute; top: 840px; left: 301px; font-size: 40px; color: rgb(181, 126, 126);">
+            <Bindings>
+                <UnityEngine.Localization.LocalizedFont property="style.unityFontDefinition" table="GUID:61bee8d79151798429542050b98a8701" entry="Id(432020385792)" />
+                <UnityEngine.Localization.LocalizedString property="text" table="GUID:c1e31d99d02ba2f4dae8bac91f806830" entry="Id(668601089257472)" />
+            </Bindings>
+        </ui:Button>
+    </ui:VisualElement>
+    <ui:VisualElement class="image" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI/UIResources/split_line.png?fileID=2800000&amp;guid=3ef0c489350cc0648918dc2380a862a4&amp;type=3#split_line&quot;); position: absolute; width: 52px; height: 607px; top: 340px; left: 542px;" />
+</ui:UXML>

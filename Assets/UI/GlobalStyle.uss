@@ -16,6 +16,15 @@
     transition: -unity-background-image-tint-color 0.5s ease, color 0.5s ease;
 }
 
+.image{
+    /* 所有图像图片禁止拉伸 */
+    background-size: cover;
+    background-repeat: no-repeat;
+    -unity-background-scale-mode: scale-to-fit;
+    /* 禁止有背景色 */
+    background-color: transparent;
+}
+
 :root{
     width: 100%;
     height: 100%;

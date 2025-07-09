@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97269afb30aa84742ae3f3342603618a, type: 3}
+  m_Name: Font_zh-Hans
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: zh-Hans
+  m_SharedData: {fileID: 11400000, guid: 61bee8d79151798429542050b98a8701, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 45657878528
+    m_Localized: f2f05deb95070fa4fa30df0600a3f427
+    m_Metadata:
+      m_Items: []
+  - m_Id: 377989361664
+    m_Localized: f00eb03777caf0f4496846510985c706
+    m_Metadata:
+      m_Items: []
+  - m_Id: 432020385792
+    m_Localized: 499051d09eee6b24d908fc3baa4b1fa0
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
