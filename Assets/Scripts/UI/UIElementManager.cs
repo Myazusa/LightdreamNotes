@@ -7,7 +7,8 @@ using UnityEngine.UIElements;
 
 namespace UI
 {
-    public class UIManager
+    [Obsolete(message:"使用UIDocumentManager.cs来管理层级")]
+    public class UIElementManager
     {
         private readonly VisualElement _rootVisualElement;
 
@@ -35,7 +36,7 @@ namespace UI
         /// </summary>
         private readonly Dictionary<UILayerName, VisualElement> _uiLayerLayout = new();
 
-        public UIManager(VisualElement rootVisualElement)
+        public UIElementManager(VisualElement rootVisualElement)
         {
             _rootVisualElement = rootVisualElement;
             // todo: 记得初始化base的栈底元素

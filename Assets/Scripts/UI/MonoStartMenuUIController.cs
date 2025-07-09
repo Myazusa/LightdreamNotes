@@ -15,7 +15,7 @@ namespace UI
 
         private const string BASE_UXML_NAME = "StartMenu";
 
-        private UIManager _manager;
+        private UIElementManager _elementManager;
 
         private void Awake()
         {
@@ -23,11 +23,11 @@ namespace UI
             var uiDocument = GetComponent<UIDocument>();
             _root = uiDocument.rootVisualElement;
             // todo: 这里是不对的，栈底和根不是同一个元素
-            _manager = new UIManager(_root);
-            var asset = UIManager.LoadVisualTreeAsset(BASE_UXML_NAME);
+            _elementManager = new UIElementManager(_root);
+            var asset = UIElementManager.LoadVisualTreeAsset(BASE_UXML_NAME);
             if (asset)
             {
-                _manager.InitLayers(asset);
+                _elementManager.InitLayers(asset);
             }
             else
             {
@@ -79,7 +79,7 @@ namespace UI
 
         private void OnDestroy()
         {
-            _manager = null;
+            _elementManager = null;
         }
     }
 }
