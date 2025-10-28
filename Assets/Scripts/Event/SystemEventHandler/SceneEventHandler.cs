@@ -8,7 +8,7 @@ namespace Event.SystemEventHandler
     public static class SceneEventHandler
     {
         /// <summary>
-        /// 切换为主游戏场景
+        /// 切换主游戏场景的方法
         /// </summary>
         /// <param name="e"></param>
         public static void HandleToMainGameScene(ref SceneEvent e)
@@ -29,7 +29,7 @@ namespace Event.SystemEventHandler
             }
         }
         /// <summary>
-        /// 退出游戏
+        /// 退出游戏的方法
         /// </summary>
         /// <param name="e"></param>
         public static void HandleGameQuit(ref SceneEvent e)

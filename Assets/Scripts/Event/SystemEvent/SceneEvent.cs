@@ -9,7 +9,7 @@ namespace Event.SystemEvent
             ToMainGameScene,
             GameQuit
         }
-        public int Id => 1002;
+        public int Id => 101;
         public readonly MonoBehaviour Context;
         public readonly CommandType Command;
         public SceneEvent(MonoBehaviour context,CommandType command)
