@@ -2,11 +2,12 @@
 
 namespace Event.SystemEvent
 {
-    public class AudioVolumeEvent:IEvent
+    public struct AudioVolumeEvent:IEvent
     {
         public enum CommandType
         {
-            MasterVolume,
+            // 这里不可变更，是和MainMixmer混响器资源对应的
+            Master,
             BgmVolume,
             SfxVolume,
             VoiceVolume,

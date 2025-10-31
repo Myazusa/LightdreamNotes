@@ -34,5 +34,10 @@ public class LightdreamNotes:MonoBehaviour
         // 注册所有事件
         EventBus.Instance.Register<SceneEvent>(EventPriority.Lowest,SceneEventHandler.HandleToMainGameScene);
         EventBus.Instance.Register<SceneEvent>(EventPriority.Lowest,SceneEventHandler.HandleGameQuit);
+
+        EventBus.Instance.Register<AudioVolumeEvent>(EventPriority.Lowest,GameSettingEventHandler.HandleChangeVolume);
+        EventBus.Instance.Register<ScreenSizeEvent>(EventPriority.Lowest, GameSettingEventHandler.HandleSetWindowSize);
+        EventBus.Instance.Register<ScreenSizeEvent>(EventPriority.Lowest, GameSettingEventHandler.HandleSwitchFullScreen);
+
     }
 }

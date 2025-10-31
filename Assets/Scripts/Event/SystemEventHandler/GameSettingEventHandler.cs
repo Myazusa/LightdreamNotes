@@ -12,6 +12,8 @@ namespace Event.SystemEventHandler
         /// <param name="e"></param>
         public static void HandleChangeVolume(ref AudioVolumeEvent e)
         {
+            // 如果本地配置没有则用默认值
+
             var dB = Mathf.Log10(Mathf.Clamp(e.Volume, 0.0001f, 1f)) * 20f;
             AudioManager.Instance.mainMixer.SetFloat(e.Command.ToString(), dB);
         }
@@ -20,15 +22,19 @@ namespace Event.SystemEventHandler
         /// 变更窗口尺寸的方法
         /// </summary>
         /// <param name="e"></param>
-        public static void HandleSetWindowSize(ref WindowSizeEvent e)
+        public static void HandleSetWindowSize(ref ScreenSizeEvent e)
         {
+            // 只变更尺寸，不变更是否全屏
             switch (e.Command)
             {
-                case WindowSizeEvent.CommandType.Size720:
-                    Screen.SetResolution(1280, 720, false);
+                case ScreenSizeEvent.CommandType.Size720:
+                    Screen.SetResolution(1280, 720, Screen.fullScreen);
                     break;
-                case WindowSizeEvent.CommandType.Size1080:
-                    Screen.SetResolution(1920, 1080, false);
+                case ScreenSizeEvent.CommandType.Size900:
+                    Screen.SetResolution(1600, 900, Screen.fullScreen);
+                    break;
+                case ScreenSizeEvent.CommandType.Size1080:
+                    Screen.SetResolution(1920, 1080, Screen.fullScreen);
                     break;
             }
         }
@@ -37,9 +43,9 @@ namespace Event.SystemEventHandler
         /// 切换全屏的方法
         /// </summary>
         /// <param name="e"></param>
-        public static void HandleSwitchFullScreen(ref WindowSizeEvent e)
+        public static void HandleSwitchFullScreen(ref ScreenSizeEvent e)
         {
-            if (e.Command != WindowSizeEvent.CommandType.SwitchFullScreen) return;
+            if (e.Command != ScreenSizeEvent.CommandType.SwitchFullScreen) return;
             Screen.fullScreen = !Screen.fullScreen;
         }
     }

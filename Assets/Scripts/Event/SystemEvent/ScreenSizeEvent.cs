@@ -1,10 +1,11 @@
 ﻿namespace Event.SystemEvent
 {
-    public class WindowSizeEvent:IEvent
+    public struct ScreenSizeEvent:IEvent
     {
         public enum CommandType
         {
             Size720,
+            Size900,
             Size1080,
             SwitchFullScreen
         }
